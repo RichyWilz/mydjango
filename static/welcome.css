@@ -1,0 +1,26 @@
+.main-wlcm{
+    margin-top: 20vh;
+    height: 50%;
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    justify-items:left;
+    align-content: space-between;
+}
+.text{
+    background-color: black;
+    opacity: 0.8;
+    color:white;
+}
+.ind-wlcm{
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    margin-right:50%;
+}
+.img-icon{
+    height: 100px;
+    width: 100px;
+    border-radius: 35%;
+}

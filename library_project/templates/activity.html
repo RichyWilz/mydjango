@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "main.html" %}
+    {% load static %}
+    {% block page_content %}
+    <br><br>
+    <center class="content-border">
+        <h1>your activity</h1>
+        <br><br>
+        <p>{% if messages %}
+            {% for message in messages %}
+             {{message}}
+            {% endfor %}
+           {% endif %}
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Email address</th>
+                    <th>Title</th>
+                    <th>Borrow Date</th>
+                    <th>Return date</th>
+                    <th>Days Remaining</th>
+                    <th>Fine</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for aform in laforms %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ aform.email_address }}</td>
+                    <td>{{ aform.book_title }}</td>
+                    <td>{{ aform.borrow_date }}</td>
+                    <td>{{ aform.return_date }}</td>
+                    <td>{{ aform.days_remaining }}</td>
+                    <td>{{ aform.Fine }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+       
+    </center>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Document 
+    </title>
+    {% extends "regbase.html" %}
+    {% load static %}
+</head>
+<body>
+    {% block page_content %}
+        <center>
+            <h2 align="center" class="content-borders">Registration Form</h2>
+            <form method="POST" class="registerform">
+                {% csrf_token %}
+                {{form.as_p}}
+                <p>Already have an account |<a href="#">SignIn Here</a></p>
+                <button type="submit" class="form-button">sign up</button>
+            </form>
+        </center>
+    {% endblock %}
+</body>
+</html>

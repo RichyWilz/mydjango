@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    {% extends 'regbase.html' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'regbase.css' %}">
+</head>
+<body>
+    {% block page_content %}
+        <br><br>
+        <center>
+            <div class="content-border">
+                <h1>Welcome Dear Student</h1>
+                <h2>LogIn Below</h3>
+                <br><br>
+                <p> 
+                {% if messages %}
+                {% for message in messages %}
+                {{message}}
+                {% endfor %}
+                {% endif %}
+                </p>
+            </div>
+            
+            <div class="login">
+                <br><br>
+                <form method= POST>
+                    {% csrf_token %}
+                    <input type="text" name="username" class="form-input" placeholder="Input your Username here">
+                    <br>
+                    <input type="password" name="password" class="form-input" placeholder="Input your Password here">
+                    <br>
+                    <input type="submit" value="Login" class="form-button">
+
+                    <p>Don't have an account?<a href="{% url 'accounts:signup' %}">Register</a> </p>
+                </form>
+            </div>
+        </center>
+    {% endblock %}
+</body>
+</html>

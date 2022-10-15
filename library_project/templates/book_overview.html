@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% extends "main.html" %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+<body>
+    {% block page_content %}
+    <br>
+    <br>
+    <div class="flex-row">
+        {% for book in books %}
+        <div class="cardshape">
+            <img class="overviewimg"  src="{{book.cover_photo.url}}" alt= "bookcover">
+                {% if book.status == 'Available' %}
+                <p style="background:green;font-size: 15px;height:16px;width:fit-content;border-radius: 50px;margin-top: -3px;text-align: center;">{{ book.status }}</p>
+                {% else %}
+                <p style="background:grey;font-size: 15px;height:16px;width:fit-content;border-radius: 50px;margin-top: -3px;text-align: center;">{{ book.status }}</p>
+                {% endif %}
+                <h5><strong>{{ book.title }}</strong></h5>
+                <p>Subject: {{ book.subject_area }}</p>
+                <div class="aboutlinkdiv"><a class="aboutlink" href= "{% url 'books:book_detail' book.pk %}">About</a></div>
+        </div>     
+        {% endfor %}      
+    </div>
+    {% endblock %}
+    <div class="body"></div>
+</body>
+</html>

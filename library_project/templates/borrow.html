@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "main.html" %}
+    {% load static %}
+    {% block page_content %}
+    <br><br>
+    <center>
+        <div class="content-border">
+            <h1>Confirm your details below to secure the book</h1>
+            <p>
+                {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+                {% endif %}
+            </p>
+        </div>
+        <br><br>
+        <form method= POST class="login">
+            <br>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <input type="submit" value="Submit" class="form-button">
+        </form>
+    </center>
+    {% endblock %}
+</body>
+</html>

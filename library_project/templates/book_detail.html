@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% extends "main.html" %}
+    {% load static %}
+    
+</head>
+<body>
+    {% block page_content %}
+    <br>
+    <br>
+    <p style="color:wheat;" class="pbook_detail">{{ detail.title }} was published on {{ detail.publication_date }} and is {{ detail.status }}</p> 
+    <p><p style="color:wheat;" class="pbook_detail">Book_ID: {{ detail.pk }} </p>
+    <div class="rowbook_detail">
+        <div>
+            <img class="imgbook_detail" src="{{detail.cover_photo.url}}" alt="">
+        </div>
+        
+        <div class="contentbook_detail">
+            <h5>Subject</h5>
+            <p>{{ detail.subject_area }}</p>
+            <h5>Book details</h5>
+            <p>{{detail.description}}</p>
+            <h5>Author</h5>
+            <p>{{detail.author}}</p>
+            <br>
+            <a class="borrowlink" style="background:blue;" href="{% url 'books:borrow' detail.pk  %}">Borrow</a>
+        </div>
+    </div>
+    <p>{% if messages %}
+        {% for message in messages %}
+         {{message}}
+        {% endfor %}
+       {% endif %}
+    {% endblock %}
+</body>
+</html>
