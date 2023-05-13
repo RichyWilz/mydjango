@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://onlinelibrary'
+    'https://onlinelibrary.up.railway.app'
 ]
 
 
