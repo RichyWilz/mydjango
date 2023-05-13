@@ -1,0 +1,33 @@
+.form-input{
+    font-size:18px;
+    width:70%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: azure;
+    margin-bottom: 30px;
+}
+.content-border{
+    background-color: black;
+    opacity: 0.8;
+    color:white;
+}
+.form-button{
+    width: fit-content;
+    height: fit-content;
+    border-width: 1px;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: gray;
+}
+.login{
+    width:50vw;
+    height: 50vh;
+    background-color: wheat;
+}
+.registerform{
+    background-color: wheat;
+    border-radius: 5px;
+}
+p{
+    font-size: 20px;
+}

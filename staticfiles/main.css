@@ -1,0 +1,154 @@
+.navbar{
+    height: 55px;
+    width: 100%;
+    background-color: wheat;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    margin-top: -10px;
+}
+.body{
+    background: url("/static/background/web-body.jpg");
+    background-size:cover;
+    background-blend-mode: multiply;
+}
+.maina{
+    font-size: 20px;
+    text-decoration: none;
+    height: 25px;
+    margin-left: 30px;
+}
+.try{
+    margin-top: 120px;
+}
+
+.overviewbody{
+    margin-top:120px;
+}
+
+
+    /*the overview part */
+
+
+p{
+    font-size: 20px;
+}
+.flex-row{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.cardshape{
+    background-color: aquamarine;
+    margin-top: 10px;
+    width:230px;
+    text-align: justify;
+}
+.overviewimg{
+    height: 300px;
+    width: 230px;
+    background-color: aquamarine;
+}
+h5{
+    font-size: 17px;
+}
+.aboutlinkdiv{
+    background-color: wheat;
+    height:30px;
+    width: 100%;
+    font-size: 20px;  
+}
+.aboutlink{
+    text-decoration:aqua;
+    margin-left: 75px;
+    border-radius: 3px;
+    line-height: 25px;
+}
+
+/* The book_detail design */
+.rowbook_detail{
+    display: flex;
+    flex-direction: row;
+    width:70%;
+}
+.imgbook_detail{
+    height:72vh;
+    width:auto;
+}
+.contentbook_detail{
+    height:fit-content;
+    width: 50%;
+    background-color: bisque;
+}
+.borrowlink{
+    text-decoration: none;
+    margin-left: 37%;
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    width:30%;
+}
+
+/* login design */
+.form-input{
+    font-size:18px;
+    width:70%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: azure;
+    margin-bottom: 30px;
+}
+.form-button{
+    width: fit-content;
+    height: fit-content;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: gray;
+}
+.login{
+    width:50vw;
+    height: 50vh;
+    background-color: wheat;
+}
+.registerform{
+    background-color: wheat;
+    border-radius: 5px;
+}
+.table-content{
+    border-collapse:collapse;
+    margin: 30px 0;
+    font-size:20px;
+    min-width:60%;
+}
+.table-content thead tr{
+    background-color: wheat;
+    color:green;
+    text-align: left;
+    font-weight: bold;
+}
+.table-content th, .table-content td {
+    padding:12px 15px;
+}
+.table-content tbody tr{
+    border-bottom: 1px solid wheat;
+    color:white;  
+}
+.content-border{
+    background-color: black;
+    opacity: 0.8;
+    color:white;
+}
+.searchbar {
+    float: right;
+    color: aqua;
+    padding: 6px;
+    border: none;
+    margin-left: 16px;
+    font-size: 17px;
+  }
